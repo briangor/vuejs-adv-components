@@ -1,6 +1,6 @@
 <template>
     <div>
-      <p>StdContact</p>
+      <p>Student Contact</p>
     </div>
 </template>
 <script>
