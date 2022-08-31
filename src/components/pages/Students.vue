@@ -1,12 +1,26 @@
 <template>
     <div>
         <p>Students</p>
+        <StudentDetail />
     </div>
 </template>
 
 <script>
+import StudentDetail from '../StudentDetail.vue';
 export default {
-    name: 'StudentsPage',
+    name: "StudentsPage",
+    components: { StudentDetail },
+    data() {
+        return {
+            studentSchema: ['Firstname', 'Lastname', 'Grade']
+        }
+    },
+    provide: function () {
+        return {
+            studentSchema: this.studentSchema
+        }
+    }
 }
 </script>
-<style></style>
+<style>
+</style>
