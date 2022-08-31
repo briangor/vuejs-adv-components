@@ -18,7 +18,9 @@
                 @click="currentTab = tab" class="btn btn-outline-primary">
                 {{ tab }}
             </button>
-            <component :is="currentTab" class="tab"></component>
+            <keep-alive>
+                <component :is="currentTab" class="tab"></component>
+            </keep-alive>
 
 
             <button @click="showStudentSchema" class="btn btn-outline-success">Get Student Schema</button>
