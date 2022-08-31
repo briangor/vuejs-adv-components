@@ -22,3 +22,12 @@ new Vue({
     }
   }
 }).$mount('#app')
+
+Vue.component('async-example', function (resolve) {
+  setTimeout(function () {
+    // Pass the component definition to the resolve callback
+    resolve({
+      template: '<div>I am async!</div>'
+    })
+  }, 1000)
+})
