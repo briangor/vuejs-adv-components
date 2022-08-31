@@ -1,6 +1,6 @@
 <template>
     <div>
-        <p>Students</p>
+        <p>This is the students page</p>
         <StudentDetail />
     </div>
 </template>
