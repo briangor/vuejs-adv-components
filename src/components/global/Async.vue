@@ -7,7 +7,7 @@
 export default {
     name: 'AsyncComponent',
     methods: {
-        getMessage(resolve, reject) {
+        getMessage(resolve) {
             setTimeout(function () {
                 // Pass the component definition to the resolve callback
                 resolve({
