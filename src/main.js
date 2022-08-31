@@ -1,25 +1,11 @@
 import Vue from 'vue'
 import App from './App.vue'
+import 'bootstrap'; 
+import 'bootstrap/dist/css/bootstrap.min.css'; 
+//import DefaultButton from "./components/global/DefaultButton.vue";
 
-Vue.config.productionTip = false
-
-const NotFound = { template: '<p>Page not found</p>' }
-const Home = { template: '<p>home page</p>' }
-const About = { template: '<p>about page</p>' }
-
-const routes = {
-  '/': Home,
-  '/about': About
-}
-
+Vue.config.productionTip = false;
+//Vue.component('DefaultButton', DefaultButton)
 new Vue({
-  data: {
-    currentRoute: window.location.pathname
-  },
-  computed: {
-    ViewComponent () {
-      return routes[this.currentRoute] || NotFound
-    }
-  },
   render: h => h(App),
 }).$mount('#app')
