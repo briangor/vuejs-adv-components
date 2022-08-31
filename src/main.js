@@ -8,4 +8,17 @@ Vue.config.productionTip = false;
 //Vue.component('DefaultButton', DefaultButton)
 new Vue({
   render: h => h(App),
+  data: {
+    rootData: 'String from root'
+  },
+  computed: {
+    bar: function () { 
+      return 'computed property in root'
+    }
+  },
+  methods: {
+    baz: function () { 
+      console.log('method in root')
+    }
+  }
 }).$mount('#app')
