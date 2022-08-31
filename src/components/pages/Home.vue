@@ -1,9 +1,10 @@
 <template>
     <div class="home">
+        <p>This is the home page</p>
         <div>
             <img src="../../assets/images/logo.png" alt="">
         </div>
-        <button @click="getRootData">Get Root Data</button>
+        <button @click="getRootData" class="btn btn-outline-primary">Get Root Data</button>
     </div>
 </template>
 
