@@ -6,14 +6,10 @@
 .student-detail {
   padding: 5rem;
 
-  .img-container {
-    border: 1px solid red;
-
-    .img {
-      max-width: 5rem;
-      width: 200px;
-      object-fit: cover;
-    }
+  .img {
+    max-width: 5rem;
+    width: 200px;
+    object-fit: cover;
   }
 }
 
@@ -29,30 +25,4 @@
   width: 15rem;
   height: auto;
   object-fit: cover;
-}
-
-
-// tabs in student details
-.tab-button {
-  padding: 6px 10px;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-  border: 1px solid #ccc;
-  cursor: pointer;
-  background: #f0f0f0;
-  margin-bottom: -1px;
-  margin-right: -1px;
-}
-
-.tab-button:hover {
-  background: #e0e0e0;
-}
-
-.tab-button.active {
-  background: #e0e0e0;
-}
-
-.tab {
-  border: 1px solid #ccc;
-  padding: 10px;
 }
