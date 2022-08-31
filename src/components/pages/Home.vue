@@ -1,12 +1,24 @@
 <template>
     <div class="home">
-        <p>This is the home page</p>
+        <div>
+            <img src="../../assets/images/logo.png" alt="">
+        </div>
+        <button @click="getRootData">Get Root Data</button>
     </div>
 </template>
 
 <script>
 export default {
-    name: 'HomePage'
+    name: 'HomePage',
+    data() {
+        return {
+        }
+    },
+    methods: {
+        getRootData(){
+            console.log(this.$root.rootData);
+        }
+    }
     
 }
 </script>
