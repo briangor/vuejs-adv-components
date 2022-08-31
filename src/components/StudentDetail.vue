@@ -6,25 +6,32 @@
             </div>
         </div>
         <div class="col-sm-12 col-md-6">
-            <div class="">
-                <button v-for="tab in tabs" v-bind:key="tab.name"
-                    v-bind:class="['tab-button', { active: currentTab.name === tab.name }]"
+            <!-- <div class="">
+                <button v-for="tab in tabs" v-bind:key="tab"
+                    v-bind:class="['tab-button', { active: currentTab === tab }]"
                     v-on:click="currentTab = tab" @click="showTab(currentTab.name)" class="btn btn-outline-primary">
                     {{ tab.name }}
                 </button>
-                <!-- <component v-bind:is="currentTab.component" class="tab"></component> -->
-            </div>
+                <component v-bind:is="currentTab.component" class="tab"></component>
+            </div> -->
+            <button v-for="tab in tabs" :key="tab" :class="['tab-button', { active: currentTab === tab }]"
+                @click="currentTab = tab" class="btn btn-outline-primary">
+                {{ tab }}
+            </button>
+            <component :is="currentTab" class="tab"></component>
+
+
             <button @click="showStudentSchema" class="btn btn-outline-success">Get Student Schema</button>
-            <StudentGrades />
+        
             <!-- update hooks -->
-            <div ref="example-element">{{ counter }}</div>
+            <!-- <div ref="example-element">Counter: {{ counter }}</div> -->
         </div>
 
     </div>
 </template>
 
 <script>
-var tabs = [
+/* let tabs = [
     {
         name: "Home",
         component: {
@@ -43,9 +50,11 @@ var tabs = [
             template: "<div>Archive component</div>"
         }
     }
-];
+]; */
 
 import StudentGrades from './students/StudentGrades.vue';
+import StudentContact from './students/StudentContact.vue';
+import StudentReport from './students/StudentReport.vue';
 
 export default {
     name: "StudentDetail",
@@ -59,8 +68,10 @@ export default {
     },
     data() {
         return {
-            tabs: tabs,
-            currentTab: tabs[0],
+            // tabs: tabs,
+            // currentTab: tabs[0],
+            currentTab: 'StudentContact',
+            tabs: ['StudentContact', 'StudentGrades', 'StudentReport'],
             text: 'Original StudentDetails text',
             counter: 0
         };
@@ -89,7 +100,7 @@ export default {
     updated() {
         console.log(`At this point, Virtual DOM has re-rendered and patched.`)
         // Fired every second, should always be true
-        console.log(+this.$refs['example-element'].textContent === this.counter)
+        // console.log(+this.$refs['example-element'].textContent === this.counter)
     },
     beforeDestroy() {
         console.log(`At this point, watchers, child components, and event listeners have not been teared down yet.`)
@@ -98,6 +109,6 @@ export default {
         console.log(`At this point, watchers, child components, and event listeners have been torn down.`)
         console.log(this)
     },
-    components: { StudentGrades }
+    components: { StudentGrades, StudentContact, StudentReport }
 }
 </script>
