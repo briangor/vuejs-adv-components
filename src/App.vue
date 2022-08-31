@@ -1,22 +1,21 @@
 <template>
   <div id="app">
     <Navbar/>
-    <p>This is root App page</p>
     <component :is="currentView" />
   </div>
 </template>
 
 <script>
 import Home from './components/pages/Home.vue'
-import About from './components/pages/About.vue'
 import NotFound from './components/pages/NotFound.vue'
 import Navbar from './components/Navbar.vue'
-import StudentsVue from './components/pages/Students.vue'
+import Students from './components/pages/Students.vue'
+import Courses from './components/pages/Courses.vue'
 
 const routes = {
   '/': Home,
-  '/about': About,
-  '/students': StudentsVue,
+  '/students': Students,
+  '/courses': Courses,
 }
 
 export default {
