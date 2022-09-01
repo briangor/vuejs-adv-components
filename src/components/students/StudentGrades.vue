@@ -20,10 +20,14 @@
 export default {
     name: 'StudentGrades',
     inject: ['studentSchema'],
+    data() {
+      return {
+        //studentSchem: studentSchema
+      }
+    },
     methods: {
       getStudentSchema(){
-        alert(studentSchema)
-        console.log(studentSchema);
+        //console.log(studentSchema);
       }
     }
 }
