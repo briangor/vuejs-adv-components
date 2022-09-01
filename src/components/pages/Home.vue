@@ -6,11 +6,11 @@
                 <div class="col-sm-12 col-md-9 ">
                     <h5>Top Courses</h5>
                     <ul>
-                        <li v-for="course in cData">{{ course.title }}</li>
+                        <li v-for="course in cData" :key="course.id">{{ course.title }}</li>
                     </ul>
                     <h5>Top Students</h5>
                     <ul>
-                        <li v-for="student in sData">{{ student.name }}</li>
+                        <li v-for="student in sData" :key="student.id">{{ student.name }}</li>
                     </ul>
                 </div>
                 <div class="col-sm-12 col-md-3">
@@ -22,7 +22,7 @@
                 </div>
             </div>
         </div>
-        <Footer />
+        <Footer ></Footer>
     </div>
 </template>
 
