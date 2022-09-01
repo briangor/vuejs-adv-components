@@ -6,14 +6,14 @@
             </div>
             <div class="col-sm-12 px-4">
                 <div class="row">
-                    <div v-for="student in sData" class="student-card col-sm-12 col-md-4 col-lg-3">
+                    <div v-for="student in sData" :key="student.id" class="student-card col-sm-12 col-md-4 col-lg-3">
                     <img :src="student.image" alt="" class="student-img">
                     <h6>{{ student.name }}</h6>
                 </div>
                 </div>
             </div>
         </div>
-        <Footer/>
+        <Footer></Footer>
     </div>
 </template>
 
