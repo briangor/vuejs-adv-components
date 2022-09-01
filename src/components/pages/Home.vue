@@ -1,5 +1,6 @@
 <template>
     <div class="home">
+        <async-example></async-example>
         <img src="../../assets/images/lucidchart-edu-lesson-plans-header.png" alt="" class="home-header-img">
         <div class="container pt-3">
             <div class="row">
